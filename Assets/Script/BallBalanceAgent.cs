@@ -62,12 +62,4 @@ public class BallBalanceAgent : Agent
             SetReward(1f - distanceToCenter / 5f); // 中心に近いほど高得点
         }
     }
-
-    public override void Heuristic(in ActionBuffers actionsOut)
-    {
-        // 手動テスト用にヒューリスティックを設定（矢印キーで操作）
-        var continuousActions = actionsOut.ContinuousActions;
-        continuousActions[0] = Input.GetAxis("Horizontal"); // X軸入力
-        continuousActions[1] = Input.GetAxis("Vertical"); // Z軸入力
-    }
 }
